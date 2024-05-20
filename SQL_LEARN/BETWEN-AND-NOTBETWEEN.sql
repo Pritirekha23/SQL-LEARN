@@ -1,0 +1,23 @@
+
+# BETWEEN AND NOT BETWEEN OPERATOR
+-- IT IS USED TO RETRIVE THE VALUE FROM A SPECIFIC RANGE.
+-- SELECT <COL1>,<COL2> FROM <TABLE_NAME> WHERE COL BETWEEN START_VALUE AND STOP_VALUE
+
+USE COMPANY;
+SELECT * FROM EMPLOYEES;
+
+
+# a) Display all the employee names of those who are getting salaries between 25,000 and 50,000. 
+SELECT * FROM EMPLOYEES WHERE SALARY BETWEEN 25000 AND 50000;
+
+# b) Employee names, salaries with min 25000 and maximum 60000 (but it is not included).
+SELECT FIRST_NAME,LAST_NAME,SALARY FROM EMPLOYEES WHERE SALARY BETWEEN 25000 AND 59999;
+ 
+ USE COMPANY;
+SELECT * FROM EMP_INFO;
+
+# c) All the employees' details those who joined in the year 2019. 
+SELECT * FROM EMP_INFO WHERE JDATE BETWEEN '2019-01-01' AND '2019-12-31';
+
+# d) All the employees' details those who have not joined in the year 2019.
+SELECT * FROM EMP_INFO WHERE JDATE NOT BETWEEN '2019-01-01' AND '2019-12-31';

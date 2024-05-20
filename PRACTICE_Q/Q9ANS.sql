@@ -1,0 +1,18 @@
+
+-- 9.	Write a query to calculate the annual salary of employees, given that the salary column stores monthly salaries.
+USE COMPANY;
+
+CREATE TABLE EMP(
+ ID INT,
+ NAME VARCHAR(20),
+ MONTHLY_SALARY INT
+);
+
+INSERT INTO EMP(ID,NAME,MONTHLY_SALARY) VALUES
+(1,"JAMES",10000),
+(2,"THOMAS",20000),
+(3,"GOMLIN",30000);
+
+SELECT * FROM EMP;
+
+SELECT NAME,MONTHLY_SALARY,MONTHLY_SALARY*12 'ANNUAL SALARY' FROM EMP;
